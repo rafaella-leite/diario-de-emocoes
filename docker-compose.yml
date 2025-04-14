@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+  user-backend:
+    build:
+      context: ./user-backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./user-backend:/app
+    depends_on:
+      - database
+
+  messaging-backend:
+    build:
+      context: ./messaging-backend
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./messaging-backend:/app
+    depends_on:
+      - database
+
+  database:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: saas_db
+    ports:
+      - "15432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
