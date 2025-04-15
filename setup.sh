@@ -12,7 +12,7 @@ docker compose up --build -d
 
 echo "Aguardando os containers inicializarem..."
 # Pode ajustar o tempo de espera conforme necessário
-sleep 30
+sleep 10
 
 # Configurando o banco de dados para o user-backend
 echo "Criando e migrando o banco para o user-backend..."

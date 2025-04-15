@@ -28,9 +28,73 @@ Para executar esse projeto é necessário possuir as seguintes aplicações
     ```bash
     chmod +x setup.sh
     ```
+ 4. Abra o Docker Desktop e o deixe executando em segundo plano
+      - Certifique-se de que a mensagem <span style="color:green">*Engine running*</span> esteja sendo exibida no canto inferior esquerdo da aplicação
+
  5. Execute o script de setup
     
     ```bash
     ./setup.sh
     ```
-    
+ 6. Verifique se os backends estão acessiveis nas seguintes rotas
+   
+   - user-backend: `http://localhost:3000`
+   - messaging-backend: `http://localhost:3001`
+
+ 7. Em caso de sucesso podemos parar os containers
+
+      ```bash
+      docker compose stop
+      ```
+      
+ Agora que o backend já está configurado, podemos seguir para o front!
+
+ #### Frontend
+   
+   O frontend é uma parte mais independente da aplicação, ele não precisa obrigatoriamente ser alocado dentro do diretório 
+   `diario-de-emocoes` e também não necessita de um conteiner dedicado no Docker.
+
+   1. Clone o projeto do frontend
+
+   ```bash
+   git clone https://github.com/ZxalFox/front.git
+   ```
+
+   2. Acesse o diretório
+
+   ```bash
+   cd front
+   ```
+
+   3. Instale as dependencias
+
+   ```bash
+   npm install
+   ```
+
+   4. Rode o projeto
+
+   ```bash
+   npm run dev
+   ```
+
+   5. Verifique se o projeto está acessivel na rota `http://localhost:5000`
+
+#### Aliases
+
+   Para facilitar a manutenção do projeto foram adicionados alguns aliases para terminal
+
+   1. Adicione o script de aliases ao seu terminal 
+
+   ```bash
+   source ./aliases.sh
+   ```
+   2. Recarregue o terminal
+
+   ```bash
+   source ~/.bashrc 
+   ```
+   
+
+
+     
