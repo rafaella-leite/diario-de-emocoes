@@ -17,7 +17,7 @@ Para executar esse projeto é necessário possuir as seguintes aplicações
 
 ## Instruções para execução do projeto
 
-#### Backend
+### Backend
 
 1.  Dentro do diretório atual, clone os dois projetos do backend
 
@@ -55,38 +55,38 @@ Para executar esse projeto é necessário possuir as seguintes aplicações
 
 Agora que o backend já está configurado, podemos seguir para o front!
 
-#### Frontend
+### Frontend
 
 O frontend é uma parte mais independente da aplicação, ele não precisa obrigatoriamente ser alocado dentro do diretório
 `diario-de-emocoes` e também não necessita de um conteiner dedicado no Docker.
 
 1.  Clone o projeto do frontend
 
-      ```bash
-      git clone https://github.com/ZxalFox/front.git
-      ```
+    ```bash
+    git clone https://github.com/ZxalFox/front.git
+    ```
 
 2.  Acesse o diretório
 
-      ```bash
-      cd front
-      ```
+    ```bash
+    cd front
+    ```
 
 3.  Instale as dependencias
 
-      ```bash
-      npm install
-      ```
+    ```bash
+    npm install
+    ```
 
 4.  Rode o projeto
 
-      ```bash
-      npm run dev
-      ```
+    ```bash
+    npm run dev
+    ```
 
 5.  Verifique se o projeto está acessivel na rota `http://localhost:5000`
 
-#### Aliases
+### Aliases
 
 Para facilitar a manutenção do projeto foram adicionados alguns aliases para terminal
 Execute o comando abaixo para adiciona-los
@@ -96,6 +96,15 @@ chmod +x add-aliases.sh
 ./add-aliases.sh
 source ~/.bashrc
 ```
+
+#### Lista de aliases
+
+- **run-user** -> Roda o servidor backend principal
+- **run-messaging** -> Roda o servidor backend de mensageria
+- **run-front** -> Roda o servidor do frontend
+- **c-user** -> Abre o console do backend principal
+- **c-messaging** -> Abre o console do backend de mensageria
+- **c-db** -> Abre o console do banco de dados
 
 ## Backlog do projeto
 

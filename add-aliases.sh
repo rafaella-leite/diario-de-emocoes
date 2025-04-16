@@ -23,7 +23,7 @@ add_alias "run-user" "docker compose up user-backend"
 add_alias "run-messaging" "docker compose up messaging-backend"
 add_alias "c-user" "docker compose exec user-backend rails console"
 add_alias "c-messaging" "docker compose exec messaging-backend rails console"
-add_alias "run-front" "docker compose up frontend"
+add_alias "run-front" "cd front && npm run dev"
 add_alias "c-db" "docker compose exec database psql -U postgres"
 add_alias "odio" "echo Relaxa e respira fundo... Você consegue! 😌"
 
