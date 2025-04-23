@@ -26,6 +26,7 @@ add_alias "c-messaging" "docker compose exec messaging-backend rails console"
 add_alias "run-front" "cd front && npm run dev"
 add_alias "c-db" "docker compose exec database psql -U postgres"
 add_alias "odio" "echo Relaxa e respira fundo... Você consegue! 😌"
+add_alias "viajando" "echo Terra para Rafaella, volte rafa, o mundo precisa de você!" 
 
 # Mensagem final
 echo "Todos os aliases foram adicionados ao $CONFIG_FILE. 🚀"
